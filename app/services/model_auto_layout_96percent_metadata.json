@@ -1,0 +1,9 @@
+{
+  "trained_date": "2025-11-04 19:43:21",
+  "target_accuracy": 96.3,
+  "total_furniture": 27,
+  "feature_count": 14,
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 200,
+  "max_depth": 20
+}
