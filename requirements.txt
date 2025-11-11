@@ -1,0 +1,16 @@
+# Backend Requirements - Optimized untuk Vercel (< 300MB)
+
+# Flask Web Framework
+Flask==3.0.0
+flask-cors==4.0.0
+Werkzeug==3.0.0
+
+# Database
+mysql-connector-python==8.2.0
+
+# Utilities
+python-dotenv==1.0.0
+
+# Numeric computation (untuk auto-place furniture)
+numpy==2.0.2
+

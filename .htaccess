@@ -1,0 +1,19 @@
+# Enable Passenger for Python application
+PassengerEnabled On
+PassengerAppRoot /home/virtuali/furnilayout
+
+# Python version - adjust based on your cPanel Python version
+PassengerPython /home/virtuali/virtualenv/furnilayout/3.9/bin/python3
+
+# Set the startup file
+PassengerStartupFile passenger_wsgi.py
+
+# Passenger App Type
+PassengerAppType wsgi
+
+# Rewrite rules to handle Flask routes
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ passenger_wsgi.py/$1 [QSA,L]
