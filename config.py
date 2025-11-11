@@ -24,12 +24,12 @@ class Config:
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max file size
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp', 'csv', 'xlsx', 'xls'}
     
-    # Database settings - Hosting MySQL (ACTIVE)
-    DB_HOST = "virtualign.my.id"
-    DB_USER = "virtuali_virtualuser"
-    DB_PASSWORD = "indra140603"
-    DB_NAME = "virtuali_virtualign"
-    DB_PORT = 3306
+    # Database settings - Environment variables first, fallback to defaults
+    DB_HOST = os.environ.get('DB_HOST', "virtualign.my.id")
+    DB_USER = os.environ.get('DB_USER', "virtuali_virtualuser")
+    DB_PASSWORD = os.environ.get('DB_PASSWORD', "indra140603")
+    DB_NAME = os.environ.get('DB_NAME', "virtuali_virtualign")
+    DB_PORT = int(os.environ.get('DB_PORT', 3306))
     
     # Database settings - Local Development (Laragon) - Backup
     # DB_HOST = "localhost"

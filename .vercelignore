@@ -1,3 +1,4 @@
+# Python
 __pycache__/
 *.pyc
 *.pyo
@@ -5,28 +6,66 @@ __pycache__/
 .Python
 env/
 venv/
-*.env
 .venv
+*.egg-info/
+
+# Environment
+*.env
+.env.*
+
+# Git
 .git/
 .gitignore
+
+# Documentation
 *.md
-backend_final/
-backend/
-frontend/
-node_modules/
-.vscode/
-*.zip
+!README.md
+
+# Tests
 test_*.py
+*_test.py
+tests/
+
+# Scripts
 *.sh
-database/
+
+# Database files (not Python code)
+*.sql
+database/schema.sql
+
+# Uploads (large files)
 static/uploads/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Data files
 *.xlsx
 *.xls
 *.csv
+
+# ML Models (large files)
 *.pkl
 *.joblib
 *.h5
 *.model
+*.weights
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
 .vercel/
-*.sql
-database/schema.sql
+*.zip
+*.tar.gz
+
+# Misc
+backend_final/
+backend/
+frontend/
+node_modules/
